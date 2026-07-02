@@ -1,17 +1,32 @@
-# weather
+# 🌦️ Offline-Aware Weather Application
 
-A new Flutter project.
+A production-ready, highly performant, and reliable weather dashboard application built with Flutter. This project is engineered with an **Offline-First approach**, adhering strictly to the principles of **Clean Architecture** and robust state management.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 Key Features
 
-A few resources to get you started if this is your first Flutter project:
+*   **Offline persistence:** Powered by Hive DB for blazing-fast local caching.
+*   **Intelligent Caching & Sync Strategy:** Always displays cached data instantly if offline or if the remote server fails.
+*   **Dynamic Location Selection:** Fully interactive city search that updates the state and persists user preferences.
+*   **Granular Forecasts:** Displays beautiful, scannable hourly and 5-day daily forecasts.
+*   **Reliable State Handling:** Built-in connection awareness with explicit user feedback on data staleness ("Last Updated").
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🏗️ Architecture Blueprint
+
+The project is structured following **Clean Architecture** to ensure independent layers, high testability, and a clear separation of concerns:
+
+```text
+lib/
+│
+├── core/                  # Shared utilities, DI, network info, and failures
+│   ├── di/                # Service Locator (GetIt)
+│   ├── error/             # Failures and exceptions definition
+│   └── network/           # Connectivity mapping
+│
+└── features/weather/      # Feature-driven modules
+    ├── data/              # Models, Local & Remote data sources, Repo implementation
+    ├── domain/            # Entities, Business logic boundaries (UseCases), Repo interfaces
+    └── presentation/      # BLoC state management, Pages, Custom UI Widgets
