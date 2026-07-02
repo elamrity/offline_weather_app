@@ -1,10 +1,10 @@
-# 🌦️ Offline-Aware Weather Application
+# Offline-Aware Weather Application
 
 A production-ready, highly performant, and reliable weather dashboard application built with Flutter. This project is engineered with an **Offline-First approach**, adhering strictly to the principles of **Clean Architecture** and robust state management.
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 *   **Offline persistence:** Powered by Hive DB for blazing-fast local caching.
 *   **Intelligent Caching & Sync Strategy:** Always displays cached data instantly if offline or if the remote server fails.
@@ -14,7 +14,7 @@ A production-ready, highly performant, and reliable weather dashboard applicatio
 
 ---
 
-## 🏗️ Architecture Blueprint
+## Architecture Blueprint
 
 The project is structured following **Clean Architecture** to ensure independent layers, high testability, and a clear separation of concerns:
 
